@@ -29,5 +29,6 @@ The script is comprised of three demonstrations:
 
 The above items are presented to the user as options at the start of the script:  
 
-![Figure 1](figure1.png "Figure 1")
+![Figure 1](figure1.png "Figure 1")  
+Figure 1
 
