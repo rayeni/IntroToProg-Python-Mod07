@@ -30,5 +30,21 @@ The script is comprised of three demonstrations:
 The above items are presented to the user as options at the start of the script:  
 
 ![Figure 1](figure1.png "Figure 1")  
-Figure 1
+ **Figure 1**
 
+## 1 Exception Handling Demo:  
+
+Bugs are a part of programming.  As a programmer, you must anticipate the occurrence of errors  
+and devise methods to catch and handle them.  If these errors *(also known as exceptions)*  
+are not anticipated and addressed ahead of time, they can terminate your program abruptly  
+and issue an error message that may not be easily interpreted by the user.  
+
+One way to handle exceptions in Python is through the use of the try and except clauses.  
+
+When error occurs in a Python program, if there isn’t any exception handling coded into the script,  
+then the program will stop executing and exit abruptly.
+
+1.	When Option #1, *Exception Handling Demo,* is selected, the demo captures the exception (FileNotFoundError), and presents a custom message to the user.  As seen in Figure 2:  
+
+![Figure 2](figure2.png "Figure 2")  
+ **Figure 2**
