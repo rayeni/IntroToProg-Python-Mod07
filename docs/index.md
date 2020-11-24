@@ -46,5 +46,28 @@ then the program will stop executing and exit abruptly.
 
 1.	When Option #1, *Exception Handling Demo,* is selected, the demo captures the exception (FileNotFoundError), and presents a custom message to the user.  As seen in Figure 2:  
 
-![Figure 2](figure2.png "Figure 2")  
- **Figure 2**
+    ![Figure 2](figure2.png "Figure 2")  
+      **Figure 2**  
+      
+2.	The code for this demo starts in the while loop.  It starts by making a function call to the **Processor.demo_exception_handler()** function, and then to the **IO.input_press_enter_to_continue()** function.    
+The following is a snippet of the code can be seen in **Figure 3**:  
+
+```
+# Step 2 - Display a menu of choices to the user
+while(True):
+    # Step 3 Show current data
+    IO.print_current_Tasks_in_list(lstTable)  # Show current data in the list/table
+    IO.print_menu_Tasks()  # Shows menu
+    strChoice = IO.input_menu_choice()  # Get menu option
+
+    # Step 4 - Process user's menu choice
+    if strChoice.strip() == '1':  # Add a new Task
+        # Call input function, capture return in variables for task and priority
+        strTask, strPriority = IO.input_new_task_and_priority()
+        # Call function to add data to list, capture return in vars for table and status
+        lstTable, strStatus = Processor.add_data_to_list(strTask, strPriority, lstTable)
+        # Call function request input to continue
+        IO.input_press_to_continue(strStatus)
+        continue  # to show the menu  
+```  
+**Figure 3**
