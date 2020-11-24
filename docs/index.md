@@ -53,21 +53,47 @@ then the program will stop executing and exit abruptly.
 The following is a snippet of the code can be seen in **Figure 3**:  
 
 ```
-# Step 2 - Display a menu of choices to the user
 while(True):
-    # Step 3 Show current data
-    IO.print_current_Tasks_in_list(lstTable)  # Show current data in the list/table
-    IO.print_menu_Tasks()  # Shows menu
-    strChoice = IO.input_menu_choice()  # Get menu option
+    IO.print_menu_options()
+    menu_choice = IO.input_menu_choice()
 
-    # Step 4 - Process user's menu choice
-    if strChoice.strip() == '1':  # Add a new Task
-        # Call input function, capture return in variables for task and priority
-        strTask, strPriority = IO.input_new_task_and_priority()
-        # Call function to add data to list, capture return in vars for table and status
-        lstTable, strStatus = Processor.add_data_to_list(strTask, strPriority, lstTable)
-        # Call function request input to continue
-        IO.input_press_to_continue(strStatus)
-        continue  # to show the menu  
+    if menu_choice.strip() == "1": # Exception Handling Demo
+        Processor.demo_exception_handler(demo_file_1)
+        IO.input_press_enter_to_continue("\nPress the [Enter] key to return to Main Menu: ")
+        continue  
 ```  
-**Figure 3**
+**Figure 3**  
+
+The code for **Processor.demo_exception_handler()** and **IO.input_press_enter_to_continue()** can be seen in **Figures 4 and 5**:  
+
+```
+class Processor:
+    """ Contains Processing Functions """
+
+    @staticmethod
+    def demo_exception_handler(file_name):
+        """ Demonstrates how exception handling works"""
+
+        # deletes file to demonstrate exception handling
+        if os.path.exists(file_name):
+            os.remove(file_name)
+
+        # exception handler
+        try:
+            open(file_name, "rb")
+        except FileNotFoundError:  # Exception generates following message:
+            print("\n[Custom Exception Message]: File is not present, skipping the reading process...\n")
+            print("**************************************************************************************")
+            print("* The above message is a custom exception that either allows the program to continue *")
+            print("* execution or to exit gracefully, instead of exiting abruptly.                      *")
+            print("**************************************************************************************")  
+```  
+**Figure 4**
+
+```
+    @staticmethod
+    def input_press_enter_to_continue(message):
+        input(message)
+```  
+**Figure 5**  
+
