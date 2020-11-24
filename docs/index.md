@@ -44,12 +44,12 @@ One way to handle exceptions in Python is through the use of the try and except 
 When error occurs in a Python program, if there isn’t any exception handling coded into the script,  
 then the program will stop executing and exit abruptly.
 
-1.	When Option #1, *Exception Handling Demo,* is selected, the demo captures the exception (FileNotFoundError), and presents a custom message to the user.  As seen in Figure 2:  
+1.	When Option #1, *Exception Handling Demo,* is selected, the demo captures the exception (```FileNotFoundError```), and presents a custom message to the user.  As seen in Figure 2:  
 
     ![Figure 2](figure2.png "Figure 2")  
       **Figure 2**  
       
-2.	The code for this demo starts in the while loop.  It starts by making a function call to the **Processor.demo_exception_handler()** function, and then to the **IO.input_press_enter_to_continue()** function.    
+2.	The code for this demo starts in the while loop.  It starts by making a function call to the ```Processor.demo_exception_handler()``` function, and then to the ```IO.input_press_enter_to_continue()``` function.    
 The following is a snippet of the code can be seen in **Figure 3**:  
 
 ```
@@ -64,7 +64,7 @@ while(True):
 ```  
 **Figure 3**  
 
-The code for **Processor.demo_exception_handler()** and **IO.input_press_enter_to_continue()** can be seen in **Figures 4 and 5**:  
+The code for ```Processor.demo_exception_handler()``` and ```IO.input_press_enter_to_continue()``` can be seen in **Figures 4 and 5**:  
 
 ```
 class Processor:
@@ -97,3 +97,11 @@ class Processor:
 ```  
 **Figure 5**  
 
+## 2 Pickling Demo:  
+
+The pickling demo converts a list to a data stream and stores the stream on disk.  
+
+1.	When **Option #2,** *Pickling Demo*, is selected, the user is presented a brief definition of pickling, and is asked to press ```Enter``` to continue (**Figure 6**):  
+
+    ![Figure 6](figure2.png "Figure 6")  
+      **Figure 6** 
