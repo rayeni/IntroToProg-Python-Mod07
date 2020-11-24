@@ -103,5 +103,10 @@ The pickling demo converts a list to a data stream and stores the stream on disk
 
 1.	When **Option #2,** *Pickling Demo*, is selected, the user is presented a brief definition of pickling, and is asked to press ```Enter``` to continue (**Figure 6**):  
 
-    ![Figure 6](figure2.png "Figure 6")  
+    ![Figure 6](figure6.png "Figure 6")  
       **Figure 6** 
+
+2.	After the user presses ```Enter``` to continue, he/she is presented with a brief comment about the demo (**Figure 7**):  
+
+    ![Figure 7](figure7.png "Figure 7")  
+      **Figure 7**
