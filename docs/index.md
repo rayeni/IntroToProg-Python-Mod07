@@ -110,3 +110,13 @@ The pickling demo converts a list to a data stream and stores the stream on disk
 
     ![Figure 7](figure7.png "Figure 7")  
       **Figure 7**
+
+3.	The script continues with the task of creating a list of three cars:  
+
+    ![Figure 8](figure8.png "Figure 8")  
+      **Figure 8**  
+
+4.	After entering three cars into the list, the script asks the user to press ```Enter``` to pickle the list (**Figure 9**):  
+
+    ![Figure 9](figure9.png "Figure 9")  
+      **Figure 9**  
