@@ -2,7 +2,7 @@ Rufus Ayeni
 November 24, 2020  
 IT FDN 110 A  
 Assignment 07  
-https://github.com/rayeni/IntroToProg-Python-Mod07  
+<https://github.com/rayeni/IntroToProg-Python-Mod07>  
 
 # Error Handling and Pickling Demo
 
@@ -13,13 +13,13 @@ script that demonstrates the two concepts.  I found the following URLs useful in
 because the conveyed the concepts in a clear and concise manner:  
 
 **The Python pickle Module: How to Persist Objects in Python:**  
-https://realpython.com/python-pickle-module/  
+<https://realpython.com/python-pickle-module/>  
 
 **Introduction to Python Exceptions:**  
-https://realpython.com/courses/introduction-python-exceptions/  
+<https://realpython.com/courses/introduction-python-exceptions/>  
 
 **Python Exceptions: An Introduction:**  
-https://realpython.com/python-exceptions/  
+<https://realpython.com/python-exceptions/>  
 
 The script is comprised of three demonstrations:  
 
