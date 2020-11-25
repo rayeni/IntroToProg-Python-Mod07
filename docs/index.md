@@ -142,7 +142,7 @@ as seen in **Figure 11**:
 
 7.	The code for the functions can be viewed in **Figures 12, 13, and 14**:  
 
-***def input_demo_list_items()***
+**def input_demo_list_items()**
 ```
     @staticmethod
     def input_demo_list_items():
@@ -178,9 +178,9 @@ as seen in **Figure 11**:
 
         return car1, car2, car3
 ```
-***Figure 12**
+**Figure 12**
 
-***def add_data_to_list()***
+**def add_data_to_list()**
 ```
     @staticmethod
     def add_data_to_list(element1, element2, element3, demo_list):
@@ -189,9 +189,9 @@ as seen in **Figure 11**:
         demo_list = [element1, element2, element3]
         return demo_list
 ```
-***Figure 13***
+**Figure 13**
 
-***def pickle_object_to_file()***
+**def pickle_object_to_file()**
 ```
     @staticmethod
     def pickle_object_to_file(demo_list, demo_file):
@@ -208,7 +208,7 @@ as seen in **Figure 11**:
         print(f'The pickle list was written to {demo_file}. File will appear when demo quits. ')
         return pk_object
 ```
-***Figure 14***
+**Figure 14**
 
 ## 3 Exception and Pickling Demo:
 
