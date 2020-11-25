@@ -120,3 +120,11 @@ The pickling demo converts a list to a data stream and stores the stream on disk
 
     ![Figure 9](figure9.png "Figure 9")  
       **Figure 9**  
+
+5.	After the pressing ```Enter``` to pickle the list, the script prints a message to inform the user that the pickled  
+list was saved to a file named ```PickleDemo.dat.``` The demo ends with the user pressing ```Enter``` to return to the Main Menu:  
+
+    ![Figure 10](figure10.png "Figure 10")  
+      **Figure 10** 
+
+
