@@ -44,7 +44,7 @@ One way to handle exceptions in Python is through the use of the try and except 
 When error occurs in a Python program, if there isn’t any exception handling coded into the script,  
 then the program will stop executing and exit abruptly.
 
-1.	When Option #1, *Exception Handling Demo,* is selected, the demo captures the exception (```FileNotFoundError```), and presents a custom message to the user.  As seen in Figure 2:  
+1.	When **Option #1**, *Exception Handling Demo,* is selected, the demo captures the exception (```FileNotFoundError```), and presents a custom message to the user.  As seen in Figure 2:  
 
     ![Figure 2](figure2.png "Figure 2")  
       **Figure 2**  
@@ -210,5 +210,93 @@ as seen in **Figure 11**:
 ```
 ***Figure 14***
 
+## 3 Exception and Pickling Demo:
 
+The exception and pickling demo combines the previous two demos (*exception handling and pickling demos*).
+
+1.	When the user selects **Option #3**, *Exception and Pickling Demo*, he/she is presented with a brief  
+overview of the demo as seen in **Figure 15**:  
+
+    ![Figure 15](figure15.png "Figure 15")  
+      **Figure 15**
+      
+2.	When the user presses ```Enter``` to continue, as seen in the previous demo, he/she is presented  
+with a custom exception message telling him/her that the file is not present for reading.  
+Instead of exiting abruptly, the program continues to run:  
+
+    ![Figure 16](figure16.png "Figure 16")  
+      **Figure 16**
+
+3.	After the user presses ```Enter``` to continue, the user is informed they will enter two  
+movie ratings (*Movie Title, and Rating*):
+
+    ![Figure 17](figure17.png "Figure 17")  
+      **Figure 17**
+      
+4.	After the user enters his movie ratings, he receives confirmation that the items are in a list, 
+and is asked press ```Enter``` to see the data in both list and table forms:
+
+    ![Figure 18](figure18.png "Figure 18")  
+      **Figure 18**
+
+5.	After the data is presented to the user in list and table forms, the user is asked to 
+press ```Enter``` to pickle the list:
+
+    ![Figure 19](figure19.png "Figure 19")  
+      **Figure 19**
+
+6.	After the user presses ```Enter``` to pickle the list, he is notified that the pickled list  
+can be viewed in a file named ```MovieRatings.dat```:
+
+    ![Figure 20](figure20.png "Figure 20")  
+      **Figure 20**
+
+7.	After the user presses ```Enter``` to continue, both lists (*pickled and non-pickled*) are shown  
+to the user for comparison:
+
+    ![Figure 21](figure21.png "Figure 21")  
+      **Figure 21**
+      
+8.	The contents of MovieRating.dat can be seen in **Figure 22**:
+
+    ![Figure 22](figure22.png "Figure 22")  
+      **Figure 22**
+  
+9.	The code for exception and pickling demo entails 11 function calls as seen in **Figure 23**:
+
+```
+    if menu_choice.strip() == "3":  # Exception and Pickling Demo
+        # Print demo purpose
+        IO.print_exception_pickling_intro()
+        # Trigger exception and its handling
+        Processor.demo_exception_handler(demo_movie_file)
+        # Instruct user to press Enter to continue
+        IO.input_press_enter_to_continue("\nPress the [Enter] key to continue: ")
+        # Print instruction
+        IO.print_message("Let's enter a two movie ratings.")
+        # Have user enter movie and rating
+        movie, movie_rating = IO.input_movie("the first")
+        # Add movie and rating to table
+        Processor.add_movie_rating(movie, movie_rating, lst_table)
+        # Have user enter movie and rating
+        movie, movie_rating = IO.input_movie("the second")
+        # Add movie and rating to table
+        Processor.add_movie_rating(movie, movie_rating, lst_table)
+        # Show table
+        IO.print_table(lst_table)
+        # pickle list object and save to binary file
+        pickle_object = Processor.pickle_object_to_file(lst_table, demo_movie_file)
+        # show pickle list object
+        IO.show_pickle_object(pickle_object, lst_table)
+```  
+**Figure 23**  
+
+## Summary:
+
+In this assignment, I created a Python script that demonstrates exception handling and pickling.  
+Exception handling is an important concept in programming that requires programmers to anticipate  
+and capture errors that users may trigger as a result of faulty programming logic.  Pickling is  
+the conversion of a Python object to a byte stream.  In other programming languages, this is  
+called serialization.   The purpose of serializing Python objects is to lower the time it takes  
+to read and write data to disk.
 
